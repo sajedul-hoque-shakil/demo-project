@@ -1,8 +1,14 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import Footer from"./Footer"
 export default function ToDoList(){
-    const [tasks,setTasks]=useState([]);
+    const [tasks,setTasks]=useState(()=>{
+        const seveTasks=localStorage.getItem("tasks");
+        return seveTasks? JSON.parse(seveTasks):[];
+    });
     const[newTask,setNewTasks]=useState("");
+    useEffect(()=>{
+        localStorage.setItem("tasks",JSON.stringify(tasks));
+    },[tasks]);
     const addTask=()=>{
         if(newTask.trim() !==""){
             setTasks([...tasks,{text:newTask, completed:false}]);
