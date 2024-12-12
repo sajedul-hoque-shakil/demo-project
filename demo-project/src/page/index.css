@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.gridDiv {
+  background-color: rgb(0, 153, 255);
+  padding: 5px;
+}
+.gridMain {
+  display: grid;
+  grid-template-columns: repeat(5, 200px);
+  grid-template-rows: repeat(10, 50px);
+  width: 100%;
+  height: auto;
+  gap: 20px;
+  justify-content: center;
+  align-items: ;
+  align-content: center;
+  margin-top: 20px;
+}
+.items-1 {
+  grid-column: 1/6;
+  grid-row: 1/2;
+}
+.items-2 {
+  grid-column: 1/6;
+  grid-row: 2/4;
+}
+.items-3 {
+  grid-column: 1/4;
+  grid-row: 4/6;
+}
+.items-4 {
+  grid-column: 4/6;
+  grid-row: 4/9;
+}
+
+.items-5 {
+  grid-column: 1/4;
+  grid-row: 6/9;
+}
+.items-6 {
+  grid-column: 1/6;
+  grid-row: 9/11;
+}

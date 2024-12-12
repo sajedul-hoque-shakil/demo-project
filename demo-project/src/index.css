@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+  font-family: "Roboto", sans-serif;
+}
+nav ul li a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.cw {
+  width: 500px;
+}
+.span1 {
+  position: relative;
+  top: 20px;
+  font-size: 25px;
+  transition: 0.2s;
+}
+.span2 {
+  opacity: 0;
+  transition: 0.2s;
+  transform: translateY(-20px);
+
+  font-size: 20px;
+}
+
+nav ul li:hover .span1 {
+  transform: translateY(-30px);
+  position: absolute;
+  color: rgb(25, 155, 241);
+  z-index: 99;
+}
+nav ul li:hover .span2 {
+  opacity: 1;
+  transform: translateY(30px);
+}
+.span3 {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid#fff;
+  position: absolute;
+  top: 5px;
+  transition: 0.2s;
+  opacity: 0;
+}
+nav ul li:hover .span3 {
+  opacity: 1;
+  top: -18px;
+  background-color: rgba(17, 24, 39, 1);
+}
+.appdiv {
+  width: 100%;
+  height: auto;
+}
+.todoDiv1 {
+  width: 500px;
+  margin: auto;
+  max-height: 1200px;
+  min-height: 500px;
+}
+.todoDiv2 {
+  width: 600px;
+}
+.todoDiv3 {
+  width: 350px;
+}
+
+.wbtn button:disabled {
+  background-color: red;
+}
